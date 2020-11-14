@@ -1,6 +1,6 @@
 <template>
   <div>
-      <p>Home</p>
+      <p>Favorite</p>
   </div>
 </template>
 <script>

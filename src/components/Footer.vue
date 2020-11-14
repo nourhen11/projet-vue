@@ -1,6 +1,6 @@
 <template>
   <div>
-      <p>Home</p>
+      <h1>footer component</h1>
   </div>
 </template>
 <script>
