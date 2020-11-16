@@ -1,7 +1,7 @@
 <template>
-  <div>
-      <p>Home</p>
-  </div>
+ <div class="container">
+   <p>home</p>
+</div>
 </template>
 <script>
   export default {

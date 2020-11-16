@@ -1,28 +1,49 @@
 <template>
-   <div id="nav">
-      <router-link to="/">home</router-link> |
-       <router-link to="/search">Recherche</router-link> |
-       <router-link to="/latest">Les nouveautés</router-link> |
-       <router-link to="/upcoming">les films à venir</router-link> |
-       <router-link to="/favorite">wishlists</router-link> 
-    </div>
+ <nav class="navbar navbar-expand-lg navbar-dark">
+  <Logo/>
+  
+
+  <div class="nav-div">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+        <router-link to="/latest" class="nav-link">Nouveautés</router-link>
+      </li>
+       <li class="nav-item active">
+        <router-link to="/upcoming" class="nav-link">les films à venir</router-link>
+      </li>
+      <li class="nav-item active">
+        <router-link to="/favorite" class="nav-link">wishlists | {{FavoriteCount}}</router-link>
+      </li>
+      
+     
+    </ul>
+
+  </div>
+</nav>
 </template>
 <script>
+import Logo from '../components/Logo'
   export default {
+    name: 'Header',
+    components:{
+      Logo
+    },
+    computed: {
 
+       FavoriteCount() {
+                return this.$store.getters.getTotalFavorite
+            }
+    }
   }
 </script>
 <style scoped>
-#nav {
-  padding: 30px;
+nav{
+  background-color: #000000e0;
+
+}
+.nav-div{
+  position: absolute;
+    right: 41px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
