@@ -1,7 +1,6 @@
 export default {
     methods: {
         addToFavorite(movie) {
-            console.log("jdjvdjfhbj")
                let list = JSON.parse(localStorage.getItem('wishlist')) || [];
                let movieObject = {
                    id: movie.id,
@@ -17,12 +16,31 @@ export default {
                
                localStorage.setItem('wishlist', JSON.stringify(list));
         },
-        removeFromFavorite(){
-
-        },
+    
         getFavorites(){
             let list = JSON.parse(localStorage.getItem('wishlist'));
             return list;
+        },
+        clearFavorites(){
+            localStorage.removeItem('wishlist');
+        },
+        removeFavorite(id){
+            let list = JSON.parse(localStorage.getItem('wishlist'));
+            const filteredlist = list.filter((item) => {
+                return item.id !== id
+            })
+            localStorage.setItem('wishlist', JSON.stringify(filteredlist));
+        },
+        checkIdMovie(id){
+            let list = JSON.parse(localStorage.getItem('wishlist'));
+            let indexOfExistingMovie = list.findIndex(
+                (el) => el.id === id
+            );
+         
+            if(indexOfExistingMovie !== -1) {
+                return true
+            }
+            return false
         }
     
     }

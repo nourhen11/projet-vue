@@ -15,6 +15,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
-</style>
+<style>
+.bnt-favorite{
+  background-color: transparent;
+    color: red;
+}
+</style>>

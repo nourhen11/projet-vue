@@ -9,7 +9,8 @@ export default {
                 url:`${apiConfigs.apiUrl}movie/popular`,
                 params:{
                     api_key:apiConfigs.apiKey,
-                    page:page
+                    page:page,
+                    language:'en-US'
                 }
 
             })
@@ -24,7 +25,8 @@ export default {
                 url:`${apiConfigs.apiUrl}movie/upcoming`,
                 params:{
                     api_key:apiConfigs.apiKey,
-                    page:page
+                    page:page,
+                    language:'en-US'
                 }
 
             })

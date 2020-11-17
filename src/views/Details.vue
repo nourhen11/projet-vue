@@ -7,17 +7,17 @@
 
     <div class="col-md-6">
       <h3 class="my-3">{{movie.title}}</h3>
-      <span>{{movie.release_date}}</span>
-      <div v-for="genre in movie.genres" :key="genre.id">
-        <span>{{genre.name}}</span>
-      </div>
+      
+      <ul>
+        <li><span class="date-span">{{movie.release_date}}</span></li>
+        <li v-for="genre in movie.genres" :key="genre.id">* {{genre.name}}</li>
+      </ul>
       <p>{{movie.overview}}</p>
-      <Button  :btnFunction="addMovie()" btnTitle="Ajouter au panier"></Button>      
-      <i class="far fa-heart"></i>
+      <Button  :btnFunction="addMovie" btnTitle="Ajouter au panier" classList="bnt-favorite"></Button>      
 
     </div>
 
-  </div>
+  </div>  
   <!-- /.row -->
 
 </template>
@@ -29,7 +29,8 @@ import Button from '../components/Button'
   export default {
     data(){
       return{
-        movie:{}
+        movie:{},
+        isFavorite:false
       }
     }
     ,
@@ -41,6 +42,8 @@ import Button from '../components/Button'
     created(){
       this.getDetailsMovie(this.$route.params.id)
       .then(res=>{this.movie=res})
+      this.checkIdMovie(this.movie.id)
+      .then(res => this.isFavorite = res)
 
     },
     mixins:[ApiMovies,Favorite],
@@ -60,4 +63,16 @@ import Button from '../components/Button'
 img{
       height: 447px;
 }
+ul{
+  list-style-type: none;
+    display: flex;
+}
+li{
+  margin-right: 10px;
+}
+.date-span{
+  color: gray;
+
+}
+
 </style>
