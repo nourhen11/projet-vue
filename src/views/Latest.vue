@@ -1,6 +1,6 @@
 <template>
 <div class="styled-div">
-    <Title title="NOUVEAUTES" />
+    <Title title="NOUVEAUTES" subTitle="Nouveauté" />
    <MovieGrid :movies="movies"></MovieGrid>
    <Pagination :pgFunction="clickCallback" :totalPages="totalPages"></Pagination>
 </div>

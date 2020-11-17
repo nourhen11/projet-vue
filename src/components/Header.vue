@@ -1,29 +1,21 @@
 <template>
- <nav class="navbar navbar-expand-lg navbar-dark">
-  <Logo/>
+ <section class="header-section">
+       <div class="head">
+       <Logo />
+         <div class="nav-div">
+                 <router-link to="/search" class="nav-link">Recherche</router-link>
+                <router-link to="/latest" class="nav-link">Nouveautés</router-link>
+                <router-link to="/upcoming" class="nav-link">les films à venir</router-link>
+                <router-link to="/favorite" class="nav-link">wishlists  {{FavoriteCount}}</router-link>
+         </div>
+       <a class="login-link">S'identifier</a>
+       </div>
+</section>
   
-
-  <div class="nav-div">
-    <ul class="navbar-nav mr-auto">
-       <li class="nav-item active">
-        <router-link to="/latest" class="nav-link">Nouveautés</router-link>
-      </li>
-       <li class="nav-item active">
-        <router-link to="/upcoming" class="nav-link">les films à venir</router-link>
-      </li>
-      <li class="nav-item active">
-        <router-link to="/favorite" class="nav-link">wishlists | {{FavoriteCount}}</router-link>
-      </li>
-      
-     
-    </ul>
-
-  </div>
-</nav>
 </template>
 <script>
 import Logo from '../components/Logo'
-  export default {
+    export default {
     name: 'Header',
     components:{
       Logo
@@ -37,13 +29,35 @@ import Logo from '../components/Logo'
   }
 </script>
 <style scoped>
-nav{
-  background-color: #000000e0;
 
+.header-section{
+  background-color:black;
+  border-bottom: 0.6rem solid #111;
+  
+  
+}
+
+
+ .header-section .head{
+      display: flex;
+      align-items: center;
+      width: 100%;
+  }
+.login-link{
+    color: #fff;
+    text-decoration: none;
+    background-color: #e50914;
+    padding: 8px 18px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 .nav-div{
-  position: absolute;
-    right: 41px;
+   width: 53%;
+    display: flex;
 }
+.nav-div a{
+text-decoration: none;
+color: white;
 
+}
 </style>

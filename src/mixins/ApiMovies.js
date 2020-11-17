@@ -3,6 +3,18 @@ import axios from 'axios'
 
 export default {
     methods: {
+        getSearchMovies(query){
+            return axios({
+                method:'GET',
+                url:`${apiConfigs.apiUrl}search/movie`,
+                params:{
+                    api_key:apiConfigs.apiKey,
+                    query:query,
+                    language:'en-US'
+                }
+
+            })
+        },
         getLatestMovies(page) {
            return axios({
                 method:'GET',

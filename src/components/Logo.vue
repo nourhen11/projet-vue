@@ -1,5 +1,5 @@
 <template>
-    <router-link to="/" class="navbar-brand"><img src="../assets/netflix.jpg"/></router-link>
+    <router-link to="/home" class="navbar-brand"><img src="../assets/logo.png"></router-link>
 </template>
 <script>
 export default {
@@ -9,7 +9,7 @@ export default {
 
 <style scoped>
 img{
-    width: 56px;
+    width: 20%;
 }
 
 </style>
