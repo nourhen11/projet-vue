@@ -1,3 +1,9 @@
+
+Lien projet : https://ntfx-dbmovie.herokuapp.com/
+
+Membres : Nourhen BARHOUMI  | Wassim KHADRAOUI
+
+
 # projet-vue
 
 ## Project setup
