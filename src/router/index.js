@@ -11,16 +11,18 @@ import Login from '../views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
+
   {
     path: '/login',
     name: 'Login',
     component: Login
   },
+  
   {
     path: '/', component: Layout,
     children: [
       { 
-        path: 'home',
+        path: '/',
         name: 'Home',
         component: Home 
       },
@@ -51,8 +53,12 @@ const routes = [
       }
 
     ]
+  },
+  {
+    path: '*',
+    redirect: '/login'
   }
- 
+
 ]
 
 const router = new VueRouter({
@@ -61,4 +67,7 @@ const router = new VueRouter({
   routes
 })
 
+
+
 export default router
+  

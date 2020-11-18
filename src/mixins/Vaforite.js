@@ -21,9 +21,7 @@ export default {
             let list = JSON.parse(localStorage.getItem('wishlist'));
             return list;
         },
-        clearFavorites(){
-            localStorage.removeItem('wishlist');
-        },
+    
         removeFavorite(id){
             let list = JSON.parse(localStorage.getItem('wishlist'));
             const filteredlist = list.filter((item) => {

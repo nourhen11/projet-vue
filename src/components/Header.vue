@@ -6,9 +6,8 @@
                  <router-link to="/search" class="nav-link">Recherche</router-link>
                 <router-link to="/latest" class="nav-link">Nouveautés</router-link>
                 <router-link to="/upcoming" class="nav-link">les films à venir</router-link>
-                <router-link to="/favorite" class="nav-link">wishlists  {{FavoriteCount}}</router-link>
+                <router-link to="/favorite" class="nav-link">wishlists</router-link>
          </div>
-       <a class="login-link">S'identifier</a>
        </div>
 </section>
   
@@ -18,13 +17,15 @@ import Logo from '../components/Logo'
     export default {
     name: 'Header',
     components:{
-      Logo
+      Logo,
+    },
+    methods:{
+      logout(){
+        localStorage.removeItem('accessToken')
+        this.$router.push({ name: 'Login'})
+      }
     },
     computed: {
-
-       FavoriteCount() {
-                return this.$store.getters.getTotalFavorite
-            }
     }
   }
 </script>

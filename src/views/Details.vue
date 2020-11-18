@@ -13,7 +13,9 @@
         <li v-for="genre in movie.genres" :key="genre.id">* {{genre.name}}</li>
       </ul>
       <p>{{movie.overview}}</p>
-      <Button  :btnFunction="addMovie" btnTitle="Ajouter au panier" classList="bnt-favorite"></Button>      
+      <Button  :btnFunction="addMovie" btnTitle="Favoris" classList="bnt-favorite"></Button> 
+      <font-awesome-icon :icon="['fas', 'heart']"/>
+    
 
     </div>
 
@@ -74,5 +76,8 @@ li{
   color: gray;
 
 }
-
+svg{
+      color: red;
+    margin-left: 7px;
+}
 </style>

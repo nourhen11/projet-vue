@@ -1,28 +1,27 @@
 <template>
 <div  class="styled-div">
     <Title title="FAVORIS" />
-    <Button  :btnFunction="clearFavorites" btnTitle="Vider Favoris" classList="bnt-favorite"></Button>      
-    <MovieGrid :movies="movies"></MovieGrid>
-     
+    <button @click="clearFavorites" v-if="movies"> <font-awesome-icon :icon="['fas', 'ban']"/>  </button>
+    <MovieGrid :movies="movies" v-if="movies"></MovieGrid>
+    <p v-else>Vous n'avez ajouté aucun film à votre liste de favoris.</p>
 </div>
 </template>
 <script>
 import Favorite from '../mixins/Vaforite'
 import MovieGrid from '../components/MovieGrid'
 import Title from '../components/TitlePage'
-import Button from '../components/Button'
   export default {
+    name:'Favorite',
     data(){
       return{
-        movies:[]
+        movies:[],
       }
     },
     methods:{
       clearFavorites(){
-        this.clearFavorites()
-        this.movies=this.getFavorites()
-
-      },
+        localStorage.removeItem('wishlist');
+        this.movies=[]
+     },
       removeFavorite(id){
         this.removeItemCart(id);
         this.cardArray=this.getCart();
@@ -31,7 +30,19 @@ import Button from '../components/Button'
     created(){
       this.movies=this.getFavorites()
     },
-    components:{MovieGrid,Title,Button},
+    components:{MovieGrid,Title},
     mixins:[Favorite]
   }
 </script>
+<style scoped>
+button{
+  background-color: transparent;
+  color: red;
+  margin-left: 553px;
+  margin-top: 10px;
+}
+p{
+  text-align: center;
+  color: white;
+}
+</style>

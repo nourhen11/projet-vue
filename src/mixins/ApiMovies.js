@@ -18,7 +18,7 @@ export default {
         getLatestMovies(page) {
            return axios({
                 method:'GET',
-                url:`${apiConfigs.apiUrl}movie/popular`,
+                url:`${apiConfigs.apiUrl}movie/now_playing`,
                 params:{
                     api_key:apiConfigs.apiKey,
                     page:page,

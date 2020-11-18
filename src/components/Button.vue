@@ -18,6 +18,10 @@ export default {
 <style>
 .bnt-favorite{
   background-color: transparent;
-    color: red;
+    color:#9a7d7d;
+}
+.bnt-logout{
+  color: red;
+    background-color: transparent;
 }
 </style>>

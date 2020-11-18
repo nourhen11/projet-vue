@@ -17,58 +17,58 @@
        </div>
 </section>
 <section class="part1">
-<div class="talk">
-<h1>Regardez Netflix sur votre TV.</h1>
-<p>Regardez Netflix sur votre Smart TV, PlayStation, Xbox, Chromecast, 
-Apple TV, lecteurs Blu-ray et bien plus.</p>
-</div>
-<div class="img">
-<img src="../assets/part1.png">
-</div>
+    <div class="talk">
+    <h1>Regardez Netflix sur votre TV.</h1>
+    <p>Regardez Netflix sur votre Smart TV, PlayStation, Xbox, Chromecast, 
+    Apple TV, lecteurs Blu-ray et bien plus.</p>
+    </div>
+    <div class="img">
+    <img src="../assets/part1.png">
+    </div>
 </section>
 <section class="list">
-<h1>Foire aux questions</h1>
-<div class="accordion-menu">
-  <div class="item" id="item1">
-  <a href="#item1" class="title">
-  <span>Netflix, qu'est-ce que c'est ?</span>
-  <i class="icon"></i>
-  </a>
-  <p class="text">
-  Netflix est un service de streaming qui propose une vaste sélection de séries TV,
-   films, animes, documentaires et autres programmes primés sur des milliers d'appareils connectés à Internet.
-  </p>
-  </div>
-   <div class="item" id="item2">
-  <a href="#item2" class="title">
-  <span>Combien coûte Netflix ??</span>
-  <i class="icon"></i>
-  </a>
-  <p class="text">
-  Regardez Netflix sur votre smartphone, tablette, Smart TV, 
-  
-  ordinateur ou appareil de streaming, le tout pour un tarif mensuel fixe. Les forfaits vont de 7,99 € à 
-  15,99 € par mois. Pas de contrat ni de frais supplémentaires.
-  </p>
-  </div>
-    <div class="item" id="item3">
-  <a href="#item3" class="title">
-  <span>Où puis-je regarder Netflix ?</span>
-  <i class="icon"></i>
-  </a>
-  <p class="text">
-Regardez où et quand vous voulez, sur un nombre illimité d'appareils. 
-Connectez-vous à votre compte pour regarder Netflix en ligne sur netflix.com depuis votre ordinateur ou tout appareil connecté à Internet avec l'application Netflix, comme les Smart TV, smartphones, tablettes, lecteurs de streaming et consoles de jeu.  </p>
-  </div>
-    <div class="item" id="item4">
-  <a href="#item4" class="title">
-  <span>Comment puis-je annuler mon forfait ?</span>
-  <i class="icon"></i>
-  </a>
-  <p class="text">
-Netflix offre une grande souplesse. Pas de contrat compliqué. Sans engagement. Deux clics suffisent pour annuler votre compte en ligne. Pas de frais d'annulation : ouvrez ou fermez votre compte à tout moment.  </p>
-  </div>
-</div>
+    <h1>Foire aux questions</h1>
+    <div class="accordion-menu">
+    <div class="item" id="item1">
+    <a href="#item1" class="title">
+    <span>Netflix, qu'est-ce que c'est ?</span>
+    <i class="icon"></i>
+    </a>
+    <p class="text">
+    Netflix est un service de streaming qui propose une vaste sélection de séries TV,
+    films, animes, documentaires et autres programmes primés sur des milliers d'appareils connectés à Internet.
+    </p>
+    </div>
+    <div class="item" id="item2">
+    <a href="#item2" class="title">
+    <span>Combien coûte Netflix ??</span>
+    <i class="icon"></i>
+    </a>
+    <p class="text">
+    Regardez Netflix sur votre smartphone, tablette, Smart TV, 
+    
+    ordinateur ou appareil de streaming, le tout pour un tarif mensuel fixe. Les forfaits vont de 7,99 € à 
+    15,99 € par mois. Pas de contrat ni de frais supplémentaires.
+    </p>
+    </div>
+        <div class="item" id="item3">
+    <a href="#item3" class="title">
+    <span>Où puis-je regarder Netflix ?</span>
+    <i class="icon"></i>
+    </a>
+    <p class="text">
+    Regardez où et quand vous voulez, sur un nombre illimité d'appareils. 
+    Connectez-vous à votre compte pour regarder Netflix en ligne sur netflix.com depuis votre ordinateur ou tout appareil connecté à Internet avec l'application Netflix, comme les Smart TV, smartphones, tablettes, lecteurs de streaming et consoles de jeu.  </p>
+    </div>
+        <div class="item" id="item4">
+    <a href="#item4" class="title">
+    <span>Comment puis-je annuler mon forfait ?</span>
+    <i class="icon"></i>
+    </a>
+    <p class="text">
+    Netflix offre une grande souplesse. Pas de contrat compliqué. Sans engagement. Deux clics suffisent pour annuler votre compte en ligne. Pas de frais d'annulation : ouvrez ou fermez votre compte à tout moment.  </p>
+    </div>
+    </div>
 </section>
 <section class="banner2">
 <div class="box">
@@ -88,7 +88,8 @@ Netflix offre une grande souplesse. Pas de contrat compliqué. Sans engagement. 
 </template>
 <script>
   export default {
-
+      components:{
+      }
   }
 </script>
 
@@ -380,6 +381,38 @@ background-color: black;
     line-height: 60px;
     min-width: 310px;
     padding: 0 30px;
+}
+.container{
+  background-color:black;
+  border-bottom: 0.6rem solid #111;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+
+  .container .head{
+      position: absolute;
+      top:0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0px -40px;
+      z-index: 1000000;
+  }
+  .container .head img{
+  
+width: 13%;
+}
+.container .head a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #e50914;
+    padding: 8px 18px;
+    border-radius: 5px;
 }
 
 </style>
